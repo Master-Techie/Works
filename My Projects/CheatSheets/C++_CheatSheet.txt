@@ -1,0 +1,384 @@
+(.) "Boilerplate"
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello World!";
+    return 0;
+}
+
+(.) "cout <<" : It prints output on the screen used with the insertion operator 
+Syntax : cout << "This is C++ Programming";
+
+(.) "cin >>" : It takes input from the user used with the extraction operator
+Syntax : cin >> variable_name;
+
+(.) "Data types"
+
+1. Character type : Typically a single octet(one byte). It is an integer type
+Syntax : char variable_name;
+
+2. Integer type : The most natural size of integer for the machine
+Syntax : int variable_name;
+
+3. Float type : A single-precision floating-point value
+Syntax : float variable_name;
+
+4. Double type : A double-precision floating-point value
+Syntax : double variable_name;
+
+5. Void type : Represents the absence of the type
+Syntax : void
+
+6. Boolean type : Returns true(1) or false(0)
+Syntax : bool variable_name;
+
+(.) "Escape Sequences" : It is a sequence of characters starting with a backslash, and it doesn't represent itself when used inside string literal.
+
+1. Alarm or Beep : It produces a beep sound
+Syntax : cout<<"\a";
+
+2. Backspace : It adds a backspace
+Syntax : cout<<"\b";
+
+3. Form feed : Some weird printing pattern
+Syntax : cout<<"\f";
+
+4. Newline : Newline Character
+Syntax : cout<<"\n";
+
+5. Carriage return : cout<<"\r";
+
+6. Tab : It gives a tab space
+Syntax : cout<<"\t";
+
+7. Backslash : It adds a backslash
+Syntax : cout<<"\\";
+
+8. Single quote : It adds a single quotation mark
+Syntax : cout<<"\'";
+
+9. Question mark : It adds a question mark
+Syntax : cout<<"\?";
+
+10. Octal No. : It represents the value of an octal number
+Syntax : cout<<"\nnn";
+
+11. Hexadecimal No. : It represents the value of a hexadecimal number
+Syntax : cout<<"\xhh";
+
+12. Null : The null character is usually used to terminate a string
+Syntax : cout<<"\0";
+
+(.) "Comments" : A comment is a code that is not executed by the compiler, and the programmer uses it to keep track of the code.
+
+1. Single line comment :-
+// It's a single line comment
+
+2. Multi-line comment :-
+/* It's a 
+multi-line
+comment
+*/
+
+(.) "Strings" : It is a collection of characters surrounded by double quotes
+
+Declaring String
+// Include the string library
+#include <string>
+
+// String variable
+string variable1 = "Hello World";
+
+(.) "String Functions"
+
+1. .append() function : It is used to concatenate two strings.
+
+string firstName = "Harry ";
+string lastName = "Bhai";
+string fullName = firstName.append(lastName);
+cout << fullName;
+
+2. .length() function : It returns the length of the string
+
+string variable1 = "CodeWithHarry";
+cout << "The length of the string is: " << variable1.length();
+
+(.) "Accessing and changing string characters"
+
+string variable1 = "Hello World";
+variable1[1] = 'i';
+cout << variable1;
+
+(.) "Maths library" : C++ provides some built-in math functions that help the programmer to perform mathematical operations efficiently. To use these functions, you have to include "#include <cmath>" at the beginning.
+
+1. "max function" : It returns the larger value among the two
+Syntax : cout << max(25, 140);
+
+2. "min function" : It returns the smaller value among the two
+Syntax : cout << min(55, 50);
+
+3. "sqrt function" : It returns the square root of a supplied number
+Syntax : cout << sqrt(144);
+
+4. "ceil function" : It returns the value of x rounded up to its nearest integer
+Syntax : double a = ceil(1.9);
+
+5. "floor function" : It returns the value of x rounded down to its nearest integer
+Syntax : double a = floor(1.02);
+
+6. "pow function" : It returns the value of x to the power of y
+Syntax : int a = pow(x, y);
+
+(.) "Decision Making Instructions" : Conditional statements are used to perform operations based on some condition.
+
+1. "If Statement" :
+
+if (condition) {
+// This block of code will get executed, if the condition is True
+}
+
+2. "If-else Statement" :
+
+if (condition) {
+// If condition is True then this block will get executed
+} else {
+// If condition is False then this block will get executed
+}
+
+3. "if else-if Statement" :
+
+if (condition) {
+// Statements;
+}
+else if (condition){
+// Statements;
+}
+else{
+// Statements
+}
+
+4. "Ternary Operator" : It is shorthand of an if-else statement.
+Syntax : variable = (condition) ? expressionTrue : expressionFalse;
+
+5. "Switch Case Statement" : It allows a variable to be tested for equality against a list of values (cases).
+
+switch (expression) {
+    case <case1>: 
+        statement1;
+    case <case2>: 
+        statement2;
+    ...
+    default: 
+        statement;
+}
+
+(.) "Iterative Statements" : Iterative statements facilitate programmers to execute any block of code lines repeatedly and can be controlled as per conditions added by the programmer.
+
+1. "while Loop" : It iterates the block of code as long as a specified condition is True
+
+while (/* condition */)
+{
+/* code block to be executed */
+}
+
+2. "do-while loop" : It is an exit controlled loop. It is very similar to the while loop with one difference, i.e., the body of the do-while loop is executed at least once even if the condition is False
+
+do
+{
+/* code */
+} while (/* condition */);
+
+3. "for loop" : It is used to iterate the statements or a part of the program several times. It is frequently used to traverse the data structures like the array and linked list.
+
+for (int i = 0; i < count; i++)
+{
+/* code */
+}
+
+(.) "Break Statement" : Break keyword inside the loop is used to terminate the loop.
+Syntax : break;
+
+(.) "Continue Statement" : Continue keyword skips the rest of the current iteration of the loop and returns to the starting point of the loop
+Syntax : continue;
+
+(.) "References" : Reference is an alias for an already existing variable. Once it is initialized to a variable, it cannot be changed to refer to another variable. So, it's a const pointer.
+
+1. "Creating References:
+
+string var1 = "Value1"; // var1 variable
+string &var2 = var1; // reference to var1
+
+(.) "Pointers" : Pointer is a variable that holds the memory address of another variable.
+
+<datatype> *var_name; 
+var_name = &variable2;
+
+(.) "Functions & Recursion" : Functions are used to divide an extensive program into smaller pieces. It can be called multiple times to provide reusability and modularity to the C program.
+
+1. "Function Definition" :
+
+<return_type> <function_name>(<data_type_parameter-1>,<data_type_parameter-2>,...){ 
+    //code to be executed 
+}
+
+2. "Function Call" : 
+
+function_name(arguments);
+
+3. "Recursion" : Recursion is when a function calls a copy of itself to work on a minor problem. And the function that calls itself is known as the Recursive function.
+
+void recurse(){
+    ... .. ...
+    recurse();
+    ... .. ...
+}
+
+(.) "Object-Oriented Programming" : It is a programming approach that primarily focuses on using objects and classes. The objects can be any real-world entities.
+
+1. "Classes" :
+
+class <Class_name> {
+    public: // Access specifier
+    // fields
+    // functions
+    // blocks
+};
+
+2. "Objects" :
+
+<Class_name> <ObjectName>;
+
+3. "Constructors" : It is a special method that is called automatically as soon as the object is created.
+
+class className {
+    public: // Access specifier
+    className() { // Constructor
+        cout << "Code With Harry";
+    }
+};
+
+int main() {
+    className obj_name; 
+    return 0;
+}
+
+4. "Encapsulation" : Data encapsulation is a mechanism of bundling the data, and the functions that use them and data abstraction is a mechanism of exposing only the interfaces and hiding the implementation details from the user.
+
+#include<iostream> 
+using namespace std;
+
+class ExampleEncap{ 
+    private: 
+    /* Since we have marked these data members private, 
+    * any entity outside this class cannot access these 
+    * data members directly, they have to use getter and 
+    * setter functions. 
+    */ 
+
+    int num; 
+    char ch; 
+
+    public: 
+    /* Getter functions to get the value of data members. 
+    * Since these functions are public, they can be accessed 
+    * outside the class, thus provide the access to data members 
+    * through them 
+    */ 
+
+    int getNum() const { 
+        return num; 
+    } 
+
+    char getCh() const { 
+        return ch; 
+    } 
+
+    /* Setter functions, they are called for assigning the values 
+    * to the private data members. 
+    */ 
+
+    void setNum(int num) { 
+        this->num = num; 
+    } 
+
+    void setCh(char ch) { 
+        this->ch = ch; 
+    } 
+};
+
+int main(){ 
+    ExampleEncap obj; 
+    obj.setNum(100); 
+    obj.setCh('A'); 
+    cout<<obj.getNum()<<endl; 
+    cout<<obj.getCh()<<endl; 
+    return 0; 
+}
+
+(.) "File Handling" : File handling refers to reading or writing data from files. C provides some functions that allow us to manipulate data in the files.
+
+1. "Creating and writing to a text file" :
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    // Create and open a text file
+    ofstream MyFile("filename.txt");
+
+    // Write to the file
+    MyFile << "File Handling in C++";
+
+    // Close the file
+    MyFile.close();
+}
+
+2. "Reading the file" : It allows us to read the file line by line.
+Syntax : getline()
+
+3. "Opening a File" : It opens a file in the C++ program.
+Syntax : void open(const char* file_name,ios::openmode mode)
+
+A. "in" : Opens the file to read(default for ifstream)
+Syntax : fs.open ("test.txt", std::fstream::in)
+
+B. "out" : Opens the file to write(default for ofstream)
+Syntax : fs.open ("test.txt", std::fstream::out)
+
+C. "binary" : Opens the file in binary mode
+Syntax : fs.open ("test.txt", std::fstream::binary)
+
+D. "app" : Opens the file and appends all the outputs at the end
+Syntax : fs.open ("test.txt", std::fstream::app)
+
+E. "ate" : Opens the file and moves the control to the end of the file
+Syntax : fs.open ("test.txt", std::fstream::ate)
+
+F. "trunc" : Removes the data in the existing file
+Syntax : fs.open ("test.txt", std::fstream::trunc)
+
+G. "nocreate" : Opens the file only if it already exists
+Syntax : fs.open ("test.txt", std::fstream::nocreate)
+
+H. "noreplace" : Opens the file only if it does not already exist
+Syntax : fs.open ("test.txt", std::fstream::noreplace)
+
+4. "Closing a file" : It closes the file
+Syntax : myfile.close()
+
+(.) "Exception Handling" : An exception is an unusual condition that results in an interruption in the flow of the program.
+
+1. "try and catch block" : A basic try-catch block in C++. When the try block throws an error, the control goes to the except block.
+
+try {
+    // code to try
+    throw exception; 
+    // If a problem arises, then throw an exception
+}
+
+catch () {
+    // Block of code to handle errors
+}
